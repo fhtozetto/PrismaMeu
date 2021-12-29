@@ -8,20 +8,20 @@ datasource db {
 }
 
 model Courses {
-  id            String    @id @default(uuid())
-  name          String    @unique
-  description   String?
-  duration      Int
-  created_at    DateTime  @default(now())
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  duration    Int
+  created_at  DateTime @default(now())
 
   @@map("courses")
 }
 
-model Modules {
-  id          String    @id @default(uuid())
-  name        String    @unique
-  description String 
-  created_at  DateTime  @default(now())
+// model Modules {
+//   id          String    @id @default(uuid())
+//   name        String    @unique
+//   description String
+//   created_at  DateTime  @default(now())
 
-  @@map("modules")
-}
+//   @@map("modules")
+// }
