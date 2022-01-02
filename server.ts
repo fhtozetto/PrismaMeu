@@ -1,18 +1,10 @@
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { create } from './src/create';
 
 async function main() {
-    const result = await prisma.courses.create({
-        data: {
-            duration: 200,
-            name: 'Curso de NodeJS',
-            description: 'Curso excelente de NodeJS',
-        }
-    });
+    const result = create(400, 'Curso de Docker', 'Excelente curso de Docker')
 
     console.log(result);
-    
+
 }
 
 main();
