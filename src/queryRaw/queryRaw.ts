@@ -8,7 +8,7 @@ async function main() {
     )
 
     console.log(result);
-    result.map((item) => console.log(item.name));
+    result.map((item) => console.log(item.name)); // resultado por usar a tipagem no $queryRaw
     
 }
 
